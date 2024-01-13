@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'sans-serif';
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000;
+    color: #fff;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/background.png);
+    background-size: cover;
+    background-position: center right;
+}
+/* Add styles for the text-based logo */
+.logo {
+    font-size: 56px; /* Adjust the font size as needed */
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block; /* Make sure inline-block is used to control the width */
+}
+
+.logo::first-letter {
+    font-size: 76px; /* Adjust the font size of the first letter */
+    color: #ff004f;
+}
+
+/* Add hover effect for the text-based logo */
+
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 140px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.3s; /* Combine multiple transitions into one line */
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 15%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text span {
+    color: #ff004f;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    background: transparent; /* Set the background to transparent */
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Add these styles for smaller screens (e.g., mobile) */
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 10px 5%;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        background-color: #333; /* Add a background color for better visibility */
+        position: absolute;
+        top: 70px; /* Adjust the top position as needed */
+        left: 0;
+        right: 0;
+        display: none; /* Initially hide the navigation */
+    }
+
+    nav ul.show {
+        display: flex; /* Show the navigation when the class is applied */
+    }
+
+    nav ul li {
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    nav ul li a::after {
+        bottom: 0; /* Adjust the bottom position for better visibility */
+    }
+
+    .menu-toggle {
+        display: block;
+        background: transparent; /* Set the background to transparent */
+    }
+
+    .bar {
+        background-color: #fff;
+        transition: transform 0.4s; /* Add transform property for the X effect */
+    }
+
+    .menu-open .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-open .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .header-text {
+        margin-top: 5%; /* Adjust the top margin as needed */
+        text-align: center;
+    }
+
+    .header-text h1 {
+        font-size: 40px;
+        margin-top: 10px;
+    }
+}
+
+  
+  /* Keep your existing styles for larger screens */
+  #row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#about-col-1 img {
+    width: 100%; /* Make the image responsive */
+    max-width: 100%; /* Ensure the image doesn't exceed its natural size */
+    border-radius: 20px;
+    height: auto;
+}
+
+#about-col-2 {
+    flex-basis: 60%;
+}
+
+#about-col-1 {
+    flex-basis: 35%;
+}
+
+#Sub-Title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #ff004f;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0px 40px 0px;
+}
+
+.tab-link {
+    margin-right: 20px; /* Adjust the spacing between tab links */
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-link::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: width 0.3s;
+}
+
+.tab-link:hover::after {
+    width: 100%;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    #row {
+        flex-direction: column; /* Change to a single column layout on smaller screens */
+    }
+
+    #about-col-1,
+    #about-col-2 {
+        flex-basis: 100%; /* Each column takes full width on smaller screens */
+    }
+}
+
+
+
+
+/* Add this to your existing style.css or create a new one for services */
+/* Add this to your existing style.css or create a new one for services */
+/* Add this to your existing style.css or create a new one for services */
+/* Add this to your existing style.css or create a new one for services */
+/* Add this to your existing style.css or create a new one for services */
+
+#Services {
+    background-color: black;
+    color: #fff;
+    padding: 60px 0;
+}
+
+#Services .container {
+    text-align: center;
+}
+
+#Sub-Title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.services-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service-item {
+    flex-basis: calc(33.33% - 20px); /* Adjust the width of each service item */
+    margin-bottom: 30px;
+    transition: transform 0.3s, z-index 0.3s; /* Add transitions for smooth effects */
+}
+
+.service-item:hover {
+    transform: scale(1.1); /* Zoom in effect on hover */
+    z-index: 1; /* Bring the hovered box to the front */
+}
+
+.service-box {
+    position: relative;
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure the box doesn't overflow during the zoom effect */
+    transition: transform 0.3s; /* Add transition for smooth effect */
+}
+
+.service-box img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.service-item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Add this to your existing CSS or create a new one for services */
+
+@media screen and (max-width: 767px) {
+    .services-row {
+        flex-direction: column; /* Stack services vertically on small screens */
+    }
+
+    .service-item {
+        width: 100%; /* Make each service take up the full width */
+        margin-bottom: 20px; /* Add spacing between services */
+    }
+}
+
+
+
+
+/* Update the styles for Portfolio to match the color scheme */
+#Portfolio {
+    background-color: #000000;
+    color: #fff;
+    padding: 60px 0;
+    padding-bottom: 30px;
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.portfolio-item {
+    width: 100%; /* Display items vertically on smaller screens */
+    margin-bottom: 20px; /* Adjust margin as needed */
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s, z-index 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.portfolio-details {
+    padding: 15px;
+    background-color: #292929;
+    color: #fff;
+}
+
+.portfolio-item h2 {
+    margin: 0;
+}
+
+.portfolio-item p {
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add this to your existing style.css or create a new one for Contact */
+/* Add this to your existing style.css or create a new one for Contact */
+/* Add this to your existing style.css or create a new one for Contact */
+/* Add this to your existing style.css or create a new one for Contact */
+#Contact {
+    background-color: black;
+    padding: 60px 0;
+    color: #fff;
+}
+
+#Contact .container {
+    text-align: center;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.contact-form {
+    flex-basis: 70%;
+    max-width: 70%;
+    margin-bottom: 20px;
+}
+
+.contact-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.lower-half {
+    flex-basis: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.resume-button {
+    background-color: #ff004f;
+    color: #fff;
+    padding: 10px 20px;
+    border: solid 1px;
+    border-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.resume-button:hover {
+    background-color: #d9004f;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-around; /* Horizontally space out social media links */
+    width: 100%;
+}
+
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.social-media a:hover {
+    color: #ff004f;
+    transform: scale(1.2);
+}
+
+/* Media Query for smaller screens (laptops and desktops) */
+@media screen and (min-width: 768px) {
+    .contact-content {
+        flex-direction: row; /* Arrange content side by side */
+        justify-content: space-between; /* Space out contact form and lower half */
+    }
+
+    .contact-form {
+        max-width: 45%; /* Adjust the width of the contact form */
+        margin-bottom: 0; /* Remove margin at the bottom */
+    }
+
+    .lower-half {
+        flex-basis: 45%; /* Adjust the width of the lower half */
+    }
+}

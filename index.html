@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Personal Portfolio</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<nav>
+					<a href="#Home" class="logo">B<span>rijesh</span></a>
+					<ul>
+						<li><a href="#Home">Home</a></li>
+						<li><a href="#About">About</a></li>
+						<li><a href="#Services">Services</a></li>
+						<li><a href="#Portfolio">Portfolio</a></li>
+						<li><a href="#Contact">Contact</a></li>
+					</ul>
+
+					<div class="menu-toggle" onclick="toggleMenu()">
+						<div class="bar"></div>
+						<div class="bar"></div>
+						<div class="bar"></div>
+					</div>
+				</nav>
+
+				<div class="header-text">
+					<p>UI/UX Designer</p>
+					<h1>Hi, I'm <span>Brijesh</span> <br />a student from UofG</h1>
+				</div>
+			</div>
+		</header>
+
+		<div id="About">
+			<div class="container">
+				<div id="row">
+					<div id="about-col-1">
+						<img src="Images/user.png" alt="User Image" />
+					</div>
+					<div id="about-col-2">
+						<h1 id="Sub-Title">About Me</h1>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+							enim ad minim veniam, quis nostrud exercitation ullamco laboris
+							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore eu fugiat
+							nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+							sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+
+						<div class="tab-titles">
+							<p class="tab-link" onclick="opentab('skills')">Skills</p>
+							<p class="tab-link" onclick="opentab('experience')">Experience</p>
+							<p class="tab-link" onclick="opentab('education')">Education</p>
+						</div>
+
+						<div class="tab-contents" id="skills">
+							<ul>
+								<li><span>UI/UX</span><br />Designing Web/App interface</li>
+								<li><span>Web Development</span><br />Web App Development</li>
+								<li><span>App Development</span><br />Building Android/Ios</li>
+							</ul>
+						</div>
+
+						<div class="tab-contents" id="experience">
+							<ul>
+								<li><span>2021-currenrt</span><br />Fashionnns designer</li>
+								<li><span>1999-2003</span><br />Unborn</li>
+								<li><span>2003-2008</span><br />Happy</li>
+								<li><span>2008-2016</span><br />Directionless</li>
+							</ul>
+						</div>
+
+						<div class="tab-contents" id="education">
+							<ul>
+								<li><span>2016</span><br />Grade 10th</li>
+								<li><span>2018</span><br />Grade 12th</li>
+								<li><span>2020</span><br />University</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Update your HTML structure -->
+		<!-- Update your HTML structure -->
+		<div id="Services">
+			<div class="container">
+				<h1 id="Sub-Title">My Services</h1>
+				<div class="services-row">
+					<div class="service-item">
+						<div class="service-box">
+							<img src="Images/uiux.jpg" alt="UI/UX Design" />
+							<h2>UI/UX Design</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+								sed dapibus leo nec ornare diam.
+							</p>
+						</div>
+					</div>
+		
+					<div class="service-item">
+						<div class="service-box">
+							<img src="Images/webdev.jpg" alt="Web Development" />
+							<h2>Web Development</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+								sed dapibus leo nec ornare diam.
+							</p>
+						</div>
+					</div>
+		
+					<div class="service-item">
+						<div class="service-box">
+							<img src="Images/appdev.jpg" alt="App Development" />
+							<h2>App Development</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+								sed dapibus leo nec ornare diam.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<!-- Add this section for Portfolio -->
+		<div id="Portfolio">
+			<div class="container">
+				<h1 id="Sub-Title">Portfolio</h1>
+		
+				<div class="portfolio-grid">
+					<div class="portfolio-item">
+						<img src="Images/project1.jpg" alt="Project 1" />
+						<div class="portfolio-details">
+							<h2>Project 1</h2>
+							<p>
+								Description of Project 1. Lorem ipsum dolor sit amet,
+								consectetur adipiscing elit.
+							</p>
+						</div>
+					</div>
+		
+					<div class="portfolio-item">
+						<img src="Images/project2.jpg" alt="Project 2" />
+						<div class="portfolio-details">
+							<h2>Project 2</h2>
+							<p>
+								Description of Project 2. Duis sed dapibus leo nec ornare diam.
+							</p>
+						</div>
+					</div>
+		
+					<div class="portfolio-item">
+						<img src="Images/project3.jpg" alt="Project 3" />
+						<div class="portfolio-details">
+							<h2>Project 3</h2>
+							<p>
+								Description of Project 3. Ut enim ad minim veniam, quis nostrud
+								exercitation ullamco laboris.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+
+		<!-- Add this to your existing HTML structure -->
+		<div id="Contact">
+			<div class="container">
+				<div class="contact-content">
+					<!-- Upper half with contact form -->
+					<div class="contact-form" id="contact-form">
+						<h2>Contact Me</h2>
+						<form action="#" method="post">
+							<div class="form-group">
+								<label for="name">Your Name</label>
+								<input type="text" id="name" name="name" required />
+							</div>
+		
+							<div class="form-group">
+								<label for="email">Your Email</label>
+								<input type="email" id="email" name="email" required />
+							</div>
+		
+							<div class="form-group">
+								<label for="message">Your Message</label>
+								<textarea id="message" name="message" rows="5" required></textarea>
+							</div>
+		
+							<button type="submit">Send Message</button>
+						</form>
+					</div>
+		
+					<!-- Lower half with resume and social media links -->
+					<div class="lower-half">
+						<a href="Images\Brijesh_Resume.pdf" download="Brijesh_Resume.pdf">
+							<button class="resume-button">Download Resume</button>
+						</a>
+		
+						<!-- Social media links -->
+						<div class="social-media">
+							<a href="https://gitlab.socs.uoguelph.ca/bthakrar" target="_blank">
+								<img src="Images/GitHub.png" alt="GitHub" />
+							</a>
+							<a href="https://twitter.com/brijesh_thakrar" target="_blank">
+								<img src="Images/twitter.png" alt="Twitter" />
+							</a>
+							<a href="https://www.linkedin.com/in/brijeshthakrar/" target="_blank">
+								<img src="Images/linkedin.png" alt="LinkedIn" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<script>
+			// Function to show a specific tab and hide others
+			function opentab(tab) {
+				var allTabs = document.getElementsByClassName("tab-contents");
+				for (var i = 0; i < allTabs.length; i++) {
+					allTabs[i].style.display = "none";
+				}
+				document.getElementById(tab).style.display = "block";
+			}
+
+			// Show 'Skills' tab by default when the page loads
+			window.onload = function () {
+				opentab("skills");
+			};
+
+			document.addEventListener("DOMContentLoaded", function () {
+				// Smooth scrolling when clicking on navigation links
+				const navLinks = document.querySelectorAll("nav ul li a");
+				navLinks.forEach((link) => {
+					link.addEventListener("click", smoothScroll);
+				});
+
+				// Function to handle smooth scrolling
+				function smoothScroll(e) {
+					e.preventDefault();
+
+					const targetId = this.getAttribute("href").substring(1);
+					const targetElement = document.getElementById(targetId);
+
+					targetElement.scrollIntoView({ behavior: "smooth" });
+				}
+			});
+
+			// Add this script to your existing script
+			function toggleMenu() {
+				const navList = document.querySelector("nav ul");
+				navList.classList.toggle("show");
+			}
+		</script>
+	</body>
+</html>
+<!-- this is my HTML file I want you to remember this then I'll provide you my CSS file  -->
